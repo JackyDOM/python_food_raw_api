@@ -3,6 +3,7 @@ from flask_cors import CORS
 from banner import get_banner_food
 from foods import get_food
 from sea import get_sea
+from temple import get_temple
 
 
 app = Flask(__name__)
@@ -20,6 +21,10 @@ def foods():
 @app.route('/api/sea', methods=['GET'])
 def sea():
     return get_sea()
+
+@app.route('/api/temple', methods=['GET'])
+def temple():
+    return get_temple()
 
 
 
