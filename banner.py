@@ -1,6 +1,6 @@
 from flask import jsonify
 
-bannes = [
+banner = [
   {
     'id': 1,
     'name': 'ម្ហូបអាហារ',
@@ -32,6 +32,6 @@ def get_banner_food():
   response = {
         "status": 200,
         "message": "Banners retrieved successfully",
-        "data": bannes,
+        "data": banner,
     }
   return jsonify(response)
