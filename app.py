@@ -4,6 +4,7 @@ from banner import get_banner_food
 from foods import get_food
 from sea import get_sea
 from temple import get_temple
+from cafe import get_cafe
 
 
 app = Flask(__name__)
@@ -77,6 +78,9 @@ def get_temple_by_id(temple_id):
         return jsonify({"status": 200, "message": "Temple retrieved successfully", "data": found_temple})
     return jsonify({"status": 404, "message": "Temple not found", "data": None})
 
+@app.route('/api/cafe', methods=["GET"])
+def cafe():
+    return get_cafe()
 
 
 if __name__ == '__main__':
