@@ -11,7 +11,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Banner
-@app.route('/api/banner', methods=['GET'])
+@app.route('/', methods=['GET'])
 def get_all_banners():  # Renamed function to avoid conflict
     return get_banner_food()
 
