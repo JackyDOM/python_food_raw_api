@@ -29,6 +29,8 @@ banner = [
 ]
 
 def get_banner_food():
+  print("get_banner_food() function called")  # Debug log
+  print("Banner data:", banner)
   response = {
         "status": 200,
         "message": "Banners retrieved successfully",
