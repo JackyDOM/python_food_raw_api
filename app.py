@@ -7,6 +7,7 @@ from temple import get_temple
 from cafe import get_cafe
 
 
+
 app = Flask(__name__)
 CORS(app)
 
@@ -81,8 +82,3 @@ def get_temple_by_id(temple_id):
 @app.route('/api/cafe', methods=["GET"])
 def cafe():
     return get_cafe()
-
-
-if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 35174))
-    app.run(debug=True,host='0.0.0.0', port=port)
